@@ -1,0 +1,17 @@
+#rosemask {
+    position: fixed;
+    width: 100%;
+}
+
+#rosemask_upper,
+#rosemask_lower {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#rosemask_centre {
+    height: 20vh;
+    width: 100%;
+    position: fixed;
+}
