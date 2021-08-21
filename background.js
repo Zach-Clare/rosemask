@@ -11,7 +11,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
         addRoseMaskToCurrentTab();       
     } else if (area == "sync" && changes.maskActive.newValue == false) {
         // invoke mask file
-        addRoseMaskToCurrentTab();       
+        RemoveRoseMaskFromCurrentTab();       
     }
 });
 

@@ -1,9 +1,5 @@
 (function() {
-    //remove CSS
-    var rosemask_css = document.getElementsById("rosemask_css");
-    document.removeChild(rosemask_css);
-
-    //remove HTML
-    var rosemask = document.getElementsById("rosemask");
-    document.removeChild(rosemask);
+    //remove HTML (the css is inline so it will be removed the same time as the HTML)
+    var rosemask = document.getElementById("rosemask");
+    document.body.removeChild(rosemask);
 })();
