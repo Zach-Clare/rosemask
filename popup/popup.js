@@ -9,6 +9,12 @@ document.body.onload = function() {
             }
         }
     });
+    chrome.storage.sync.get("maskSize", function(items) {
+        if (!chrome.runtime.error) {
+            console.log(items.maskSize);
+            document.getElementById("maskSizeInput").value = items.maskSize;
+        }
+    });
 }
 
 maskCheckbox.addEventListener("click", async() => {
@@ -20,6 +26,14 @@ maskCheckbox.addEventListener("click", async() => {
         // turn off
         chrome.storage.sync.set({ "maskActive" : false });
         // remove overlay divs!
+    }
+});
+
+let maskSizeInput = document.getElementById("maskSizeInput");
+maskSizeInput.addEventListener("keyup", async() => {
+    // if checkbox is checked
+    if (!isNaN(maskSizeInput.value)) {
+        chrome.storage.sync.set({ "maskSize" : maskSizeInput.value });
     }
 });
 

@@ -1,6 +1,12 @@
 (function() {
-
-    let rosemask_viewport = 130;
+    
+    let rosemask_viewport = 120;
+    
+    chrome.runtime.sendMessage({requestValue: "getmasksize"}, function(response) {
+        console.log("Response: ", response);
+        rosemask_viewport = parseInt(response["result"]);
+        rosemask_centre.style.height = rosemask_viewport + "px";
+    });
     
     //insert HTML and CSS
     let rosemask = document.createElement("div");
@@ -35,7 +41,6 @@
         let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
         let height_offset = (1000 + 1000 + rosemask_viewport) / 2;
         rosemask.style.top = 0 - scrollTop - height_offset + e.pageY + 'px';
-        console.log(scrollTop, height_offset, e.pageY, rosemask.style.top);
     }
 
     document.addEventListener('mousemove', mouseMove);

@@ -2,6 +2,7 @@ chrome.runtime.onInstalled.addListener(init());
 
 function init() {
     chrome.storage.sync.set({ "maskActive" : false });
+    chrome.storage.sync.set({ "maskSize" : 130 });
 }
 
 // if mask turned on
@@ -13,6 +14,16 @@ chrome.storage.onChanged.addListener((changes, area) => {
         // invoke mask file
         RemoveRoseMaskFromCurrentTab();       
     }
+});
+
+chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
+    if (msg["requestValue"] == "getmasksize") {
+        chrome.storage.sync.get(["maskSize"], function(result) {
+            console.log(result);
+            sendResponse({ result: result["maskSize"]});
+        });
+    }
+    return true;
 });
 
 function addRoseMaskToCurrentTab() {
