@@ -37,6 +37,11 @@ maskSizeInput.addEventListener("keyup", async() => {
     }
 });
 
+let option_button = document.getElementById("btn1");
+option_button.addEventListener("click", function(){
+    chrome.tabs.create({url: "options.html"});
+});
+
 // make thing follow mouse first, make it a blue box that tracks the y position.
 // Then when that works, you can make two more boxes that do it, plus and minus some arbritary value
 // Then make those plus/minus offsets editable by the user and viola!
