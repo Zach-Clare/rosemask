@@ -39,7 +39,7 @@ maskSizeInput.addEventListener("keyup", async() => {
 
 let option_button = document.getElementById("btn1");
 option_button.addEventListener("click", function(){
-    chrome.tabs.create({url: "options.html"});
+    chrome.tabs.create({url: "/options.html"});
 });
 
 // make thing follow mouse first, make it a blue box that tracks the y position.
