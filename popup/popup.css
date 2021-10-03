@@ -1,3 +1,63 @@
 body {
-    width: 100px;
+    width: 200px;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+.options {
+    width: auto;
+}
+
+.option {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mask-on {
+    background-color: #e0e0e0;
+}
+#mask-toggle-label {
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+#mask-size-input {
+    width: 100%;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+label {
+    border: 1px #aaaaaa solid;
+    border-radius: 3px 0px 0px 3px;
+    padding: 0.1em;
+}
+#size-label {
+    padding: 0.1em 1em;
+}
+#size-units-label {
+    border: 1px #aaaaaa solid;
+    border-radius: 0px 3px 3px 0px;
+    padding: 0.1em 0.5em;
+    color: #909090;
+}
+
+input {
+    border: 1px #aaaaaa solid;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+button {
+    background-color: white;
+    border: 1px #aaaaaa solid;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 1em;
+    width: 100%;
 }

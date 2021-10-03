@@ -16,6 +16,11 @@ chrome.storage.onChanged.addListener((changes, area) => {
     }
 });
 
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    chrome.storage.sync.set({ "maskActive" : false });
+    RemoveRoseMaskFromCurrentTab();
+});
+
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
     if (msg["requestValue"] == "getmasksize") {
         chrome.storage.sync.get(["maskSize"], function(result) {

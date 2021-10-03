@@ -4,12 +4,24 @@
         <link rel="stylesheet" href="popup.css">
     </head>
     <body>
+        <div class="header">
+            <div class="logo-div">
+                <img src="../assets/logo128.png">
+            </div>
+        </div>
         <div class="options">
-            <input type="checkbox" name="toggleMask" id="toggleMask">
-            <label for="toggleMask">Toggle Mask</label>
-            <input type="number" name="size" id="maskSizeInput" value="130">
-            <label for="size">Size</label>
-            <button type="button" class="button" id="btn1">clicky-poos!</button>
+            <div class="option option-masktoggle">
+                <label for="toggleMask" id="mask-toggle-label">Activate Mask</label>
+                <input type="checkbox" name="toggleMask" id="toggleMask">
+            </div>
+            <div class="option option-masksize">
+                <label id="size-label" for="size">Size</label>
+                <input type="number" step="10" name="size" id="mask-size-input" value="130">
+                <span id="size-units-label">pixels</span>
+            </div>
+            <div class="option citation">
+                <button type="button" class="button" id="citation">Create a Citation</button>
+            </div>
         </div>
         <script src="popup.js"></script>
     </body>

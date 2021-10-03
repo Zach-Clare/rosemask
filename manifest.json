@@ -1,7 +1,7 @@
 {
     "name": "Rose",
     "description": "Screen masker to aid reading for those with difficuluty focusing",
-    "version": "1.0",
+    "version": "0.1",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"
@@ -10,10 +10,10 @@
     "action": {
         "default_popup": "popup/popup.html",
         "default_icon": {
-            "128": "logo128.png"
+            "128": "assets/logo128.png"
         }
     },
     "icons": {
-        "128": "logo128.png"
+        "128": "assets/logo128.png"
     }
 }

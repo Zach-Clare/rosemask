@@ -13,6 +13,8 @@
     rosemask.setAttribute("id", "rosemask");
     rosemask.style.position = "fixed";
     rosemask.style.width = "100%";
+    rosemask.style.zIndex = "99999999";
+    rosemask.style.pointerEvents = "none";
 
     let rosemask_upper = document.createElement("div");
     rosemask_upper.setAttribute("id", "rosemask_upper");
