@@ -23,6 +23,7 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
+    cursor: pointer;
 }
 #mask-size-input {
     width: 100%;
@@ -36,12 +37,12 @@ label {
     padding: 0.1em;
 }
 #size-label {
-    padding: 0.1em 1em;
+    padding: 0.3em 1em;
 }
 #size-units-label {
     border: 1px #aaaaaa solid;
     border-radius: 0px 3px 3px 0px;
-    padding: 0.1em 0.5em;
+    padding: 0.3em 0.5em;
     color: #909090;
 }
 
@@ -60,4 +61,13 @@ button {
     font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: 1em;
     width: 100%;
+}
+
+.footnote {
+    text-align: right;
+}
+.footnote a {
+    text-align: right;
+    color: #999;
+    font-size: 0.8em;
 }

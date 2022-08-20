@@ -1,6 +1,6 @@
 {
-    "name": "Rose",
-    "description": "Screen masker to aid reading for those with difficuluty focusing",
+    "name": "RoseMask",
+    "description": "Darkens portions of the screen to aid focus",
     "version": "0.1",
     "manifest_version": 3,
     "background": {
@@ -15,5 +15,11 @@
     },
     "icons": {
         "128": "assets/logo128.png"
+    },
+    "commands": {
+        "command-name" : {
+            "suggested_key": "Ctrl+M",
+            "description": "Toggle Mask"
+        }
     }
 }

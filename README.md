@@ -5,22 +5,22 @@
 Sarah Ruhl, The Clean House
 
 # Overview
-RoseSuite aims to be a free and open package to help students and workers focus and study, taking the form of a chrome extension. Special attention is given to tools that provide a higher level of accessibility to those with difficulties.
+RoseSuite aims to be a free and open package to help students and workers focus and study, taking the form of a series of chrome extensions. Special attention is given to tools that provide a higher level of accessibility to those with difficulties.
 
 # Roadmap
 Development will progress and new components will be added when they're ready. We have a number of goals that are outlined below.
 
-**v0.1:**
+**Current Functionality:**
 * A resizeable masking feature to darken above and below the cursor so that attention is kept to relevent parts of the screen.
-* The mask can be turned onn and off via a popup or via a keyboard shortcut.
+* The mask can be turned on and off via a popup or via a keyboard shortcut.
 * A compelling logo
 * A well-structured user interface.
 
-**v0.2:**
+**Goals:**
 * A citation helper with a number of well-used templates
 * Smooth design of using and changing in-use citation templates
 
-**Future features:**
+**Nice-to-haves:**
 * A pomodoro timer
 * Support for user-customisable citation templates
 

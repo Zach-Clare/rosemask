@@ -18,7 +18,19 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     chrome.storage.sync.set({ "maskActive" : false });
-    RemoveRoseMaskFromCurrentTab();
+    // RemoveRoseMaskFromCurrentTab();
+});
+
+chrome.commands.onCommand.addListener((command, tab) => {
+    chrome.storage.sync.get(["maskActive"], function(result) {
+        // (current);
+        if (result.maskActive == true) {
+            chrome.storage.sync.set({ "maskActive" : false });
+        } else {
+            chrome.storage.sync.set({ "maskActive" : true });
+        }
+    });
+    
 });
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
