@@ -12,7 +12,7 @@ Development will progress and new components will be added when they're ready. W
 
 **Current Functionality:**
 * A resizeable masking feature to darken above and below the cursor so that attention is kept to relevent parts of the screen.
-* The mask can be turned on and off via a popup or via a keyboard shortcut.
+* The mask can be turned on and off via a popup or via a keyboard shortcut (Ctrl+M, Cmd+M).
 * A compelling logo
 * A well-structured user interface.
 
